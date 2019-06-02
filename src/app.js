@@ -1,13 +1,13 @@
-"use strict"
+'use strict'
 
-import React, { PureComponent } from "react"
-import ajax from "@fdaciuk/ajax"
-import AppContent from "components/app-content"
+import React, { PureComponent } from 'react'
+import ajax from '@fdaciuk/ajax'
+import AppContent from 'components/app-content'
 
-import "./css/style.css"
+import './css/style.css'
 
 class App extends PureComponent {
-  constructor() {
+  constructor () {
     super()
     this.state = {
       userinfo: null,
@@ -16,7 +16,7 @@ class App extends PureComponent {
     }
   }
 
-  handleSearch(e) {
+  handleSearch (e) {
     const value = e.target.value
     const keyCode = e.which || e.keyCode
     const ENTER = 13
@@ -39,7 +39,7 @@ class App extends PureComponent {
     }
   }
 
-  getRepos(e) {
+  getRepos (e) {
     ajax()
       .get(`https://api.github.com/users/${this.state.userinfo.login}/repos`)
       .then(result => {
@@ -53,7 +53,7 @@ class App extends PureComponent {
       })
   }
 
-  getStarRed(e) {
+  getStarRed (e) {
     ajax()
       .get(`https://api.github.com/users/${this.state.userinfo.login}/starred`)
       .then(result => {
@@ -67,7 +67,7 @@ class App extends PureComponent {
       })
   }
 
-  render() {
+  render () {
     return (
       <AppContent
         {...this.state}

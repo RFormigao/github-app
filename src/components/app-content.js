@@ -1,10 +1,10 @@
-"use strict"
+'use strict'
 
-import React, { PropTypes } from "react"
-import Search from "components/search"
-import UserInfo from "components/user-info"
-import Actions from "components/actions"
-import Repos from "components/repos"
+import React, { PropTypes } from 'react'
+import Search from 'components/search'
+import UserInfo from 'components/user-info'
+import Actions from 'components/actions'
+import Repos from 'components/repos'
 
 const AppContent = ({
   userinfo,
@@ -14,17 +14,17 @@ const AppContent = ({
   getRepos,
   getStarRed
 }) => (
-  <div className="app">
+  <div className='app'>
     <Search handleSearch={handleSearch} />
     {!!userinfo && <UserInfo userinfo={userinfo} />}
     {!!userinfo && <Actions getRepos={getRepos} getStarRed={getStarRed} />}
 
     {!!repos.length && (
-      <Repos className="repos" title="Repositórios:" repos={repos} />
+      <Repos className='repos' title='Repositórios:' repos={repos} />
     )}
 
     {!!starred.length && (
-      <Repos className="starred" title="Favoritos:" repos={starred} />
+      <Repos className='starred' title='Favoritos:' repos={starred} />
     )}
   </div>
 )
