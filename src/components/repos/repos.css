@@ -1,0 +1,22 @@
+.repos, .starred {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #262626;
+}
+
+.repos h2, .starred h2{
+  font-size: 28px;
+  color: #262626;
+  margin: 0;
+}
+
+.repos ul, .starred ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.repos ul li a, .starred ul li a {
+  color: #262626;
+  font-size: 18px;
+}

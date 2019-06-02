@@ -1,6 +1,13 @@
-"use strict"
+'use strict'
 
-import React from "react"
-import { storiesOf } from "@storybook/react"
+import React from 'react'
+import { storiesOf, action } from '@storybook/react'
+import Actions from './index'
 
-storiesOf("Div", module).add("first story", () => <div>Hello div</div>)
+const stories = storiesOf('Actions', module)
+
+stories.add('Actions components', () => (
+  <div className='app'>
+    <Actions getRepos={action('Get Repos')} getStarRed={action('Get Starred')} />
+  </div>
+))
